@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<script>
+
+function process()
+{
+
+
+name=document.getElementsByName("myname")[0].value;
+age=document.getElementsByName("myname")[1].value;
+//document.write(name);
+
+
+document.getElementById("r_name").innerHTML=name;
+document.getElementById("r_age").innerHTML=age;
+}
+
+</script>
+
+
+<body>
+<form>
+<lable>Enter Name:  </lable><input type="text" name="myname"><br>
+<lable>Enter Age:  </lable><input type="text" name="myname"><br>
+<input type="button" value="submit" onclick="process()">
+
+</form>
+<div id="r_name"></div>
+<div id="r_age"></div>

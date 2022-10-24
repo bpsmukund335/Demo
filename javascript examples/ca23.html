@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+table
+{
+    padding: 10px;
+    border-radius: 1em;
+    height:200px;
+    width: 300px;
+    margin: auto;
+    background-color: #191b28;
+    }
+
+
+input[type=button]
+{
+    background-color: #64278f;
+    color: white;
+    border: solid black 0.5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 70%;
+}
+tbody
+{
+background-color: blue;
+}
+input[type=text]
+{
+border: solid bluek 0.5px;
+ background-color: #dcdbe1;
+    border: solid black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 65%;
+}
+
+</style>
+</head>
+<body>
+<table>
+<tbody>
+<tr>
+<td colspan="3">
+<input type="text" value="" id="result">
+</td>
+
+
+<td>
+<input type="button" value="c" onclick="clr()">
+</td>
+<tr>
+
+<tr>
+<td><input type="button" value="1" onclick="dis('1')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="2" onclick="dis('2')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="3" onclick="dis('3')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="/" onclick="dis('/')"  onkeydown="myFunction(event)"></td>
+</tr>
+
+
+<tr>
+<td><input type="button" value="4" onclick="dis('4')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="5" onclick="dis('5')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="6" onclick="dis('6')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="*" onclick="dis('*')"  onkeydown="myFunction(event)"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onclick="dis('7')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="8" onclick="dis('8')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="9" onclick="dis('9')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="-" onclick="dis('-')"  onkeydown="myFunction(event)"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="0"  onclick="dis('0')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="."  onclick="dis('.')"  onkeydown="myFunction(event)"></td>
+<td><input type="button" value="="    onkeydown="myFunction(event)" onclick="solve()"></td>
+<td><input type="button" value="+"  onclick="dis('+')"  onkeydown="myFunction(event)"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+<script>
+function dis(val) {
+            document.getElementById("result").value += val;
+        }
+
+function clr() {
+            document.getElementById("result").value = "" ;
+        }
+
+
+
+ function solve() {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+</script>
